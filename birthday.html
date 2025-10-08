@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div id="welcome">
+      <h1>🎉 Happy Birthday! 🎉</h1>
+      <button onclick="startSurprise()">Click to Begin</button>
+    </div>
+
+    <div id="main-content" style="display: none;">
+      <audio id="bg-music" loop>
+        <source src="your-music.mp3" type="audio/mpeg" />
+      </audio>
+
+      <div class="message">
+        <h2>Dear [Name],</h2>
+        <p>Wishing you a day filled with love, laughter, and unforgettable moments.</p>
+        <p>You’re truly special, and I hope this day is as amazing as you are! 💖</p>
+      </div>
+
+      <div class="slideshow">
+        <img src="img1.jpg" class="slide" />
+        <img src="img2.jpg" class="slide" />
+        <img src="img3.jpg" class="slide" />
+      </div>
+
+      <div class="surprise-box">
+        <button onclick="revealSurprise()">🎁 Open Your Surprise</button>
+        <div id="surprise" style="display: none;">
+          <h3>🎂 Here's a virtual cake just for you! 🎂</h3>
+          <img src="cake.png" alt="Birthday Cake" class="cake" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <canvas id="confetti-canvas"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
